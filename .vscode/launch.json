@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "name": "jest-tests",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "args": [
+        "run",
+        "test:unit",
+        "--",
+        "--runInBand",
+        "--watchAll=false",
+        "--testNamePattern",
+        "${jest.testNamePattern}",
+        "--runTestsByPath",
+        "${jest.testFile}"
+      ]
+    }
+  ]
+}
